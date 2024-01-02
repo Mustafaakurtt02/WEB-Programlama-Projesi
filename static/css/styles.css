@@ -1,0 +1,55 @@
+.baslik{
+  padding: 20px;
+  border: 1px solid white;
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #ee5057 !important;
+}
+.satir{
+  padding: 10px;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  background-color: gray !important;
+}
+.satir select{
+  padding: 1px 10px !important;
+}
+.ucusDetaybtn{
+  border: 1px solid white;
+}
+.satirDetay{
+  background-color: white;
+  border: 1px solid gray;
+}
+.satir a{
+  color: white;
+  padding : 10px 65px;
+  text-decoration: none;
+}  
+#satirDetay{
+  font-size: 15px;
+}
+.satirKarsilik{
+  padding: 10px;
+  border: 1px solid gray !important;
+  color: black;
+  text-align: center;
+}
+.satirKarsilik1{
+  color: black;
+  text-align: center;
+  padding: 0px;
+  padding-top: 11px;
+}
+.satirKarsilik1 a{
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+}
+.oturum{
+  padding: 50px !important;
+  background-color: #ee5057 !important;
+  color: white !important;
+}

@@ -1,0 +1,50 @@
+<html>
+<body>
+    <p>Doluluk Oranları Oran : {{ oran }}</p>
+    <p>UÇUŞ BİLGİLERİ</p>
+    <table border = 1>
+        <thead>
+            <td>Uçuş Kodu</td>
+            <td>Kalkış Yeri</td>
+            <td>İniş Yeri</td>
+            <td>Fiyat</td>
+            <td>Tarih</td>
+            <td>Doluluk Oranı</td>
+        </thead>
+        {% for ucuslar in ucuslar %}
+        <tr>
+            <td>{{ucuslar["UcusID"]}}</td>
+            <td>{{ucuslar["KalkisYeri"]}}</td>
+            <td>{{ucuslar["InisYeri"]}}</td>
+            <td>{{ucuslar["Fiyat"]}}</td>
+            <td>{{ucuslar["Tarih"]}}</td>
+            <td>%{{oran[ucuslar["UcusID"]-1]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+   <a href="/">Anasayfa</a> 
+
+   {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                {% if message != "Başarıyla giriş yaptınız" %}
+                    <div style="z-index: 10000;position:fixed;top:100px;width:90%; text-align: center;margin-top: 20px; margin-left:5%;margin-right:5%;" class="alert alert-danger alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        {{message}}
+                    </div>
+                {% elif message == "Başarıyla giriş yaptınız" %}
+                    <div style="z-index: 10000;position:fixed;top:100px;width:90%; text-align: center;margin-top: 20px; margin-left:5%;margin-right:5%;" class="alert alert-success alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        {{message}}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+
+
+
+
+</body>
+</html>
